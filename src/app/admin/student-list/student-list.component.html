@@ -31,14 +31,15 @@
       <td>{{student.section}}</td>
       <td>{{student.department}}</td> 
             <td class="text-center"> <button  (click)="routeToUpdate(student.id)" class="btn btn-primary "><i class="fa fa-pencil"></i></button> 
-      
+              <!-- <button type="button" class="btn btn-primary ms-1" (click)="displaydetails(student)"><i class="fa fa-info" aria-hidden="true"></i></button> -->
+
        </td>
     </tr>
   </tbody>
 </table>
 </div>
 </div>
-<pagination-controls (pageChange)="ChangePage($event)"></pagination-controls>
+<pagination-controls (pageChange)="ChangePage($event)" *ngIf="!isShown"></pagination-controls>
 <app-detail-student *ngIf="isShown"  (isShown)="doSomething($event)" [detailInfo]="data" ></app-detail-student>
 
 

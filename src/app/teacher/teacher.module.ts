@@ -9,18 +9,23 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { AssignedStudentComponent } from './assigned-students/assigned-students.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+// import { DetailStudentComponent } from '../student/detail-student/detail-student.component';
+import { StudentModule } from '../student/student.module';
 
 
 @NgModule({
   declarations: [
-      AssignedStudentComponent
+      AssignedStudentComponent,
+      // DetailStudentComponent
   ],
   imports: [
     CommonModule,
     TeacherRoutingModule,
     FormsModule,ReactiveFormsModule,
     NgxPaginationModule,
-    SharedModuleModule
+    SharedModuleModule,
+    StudentModule
+    
   ],
   providers:[TeacherService]    
 })

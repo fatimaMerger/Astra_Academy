@@ -39,7 +39,7 @@
 </table>
 </div>
 </div>
-<pagination-controls (pageChange)="ChangePage($event)"></pagination-controls>
+<pagination-controls (pageChange)="ChangePage($event)" *ngIf="!isShown"></pagination-controls>
 <app-detail-student *ngIf="isShown"  (isShown)="doSomething($event)" [detailInfo]="data" ></app-detail-student>
 
 </div>

@@ -24,7 +24,7 @@ this.getUser()
   {
    
     this.user = this.auth.getCurrentUser();
-    console.log('asdfadsfasd',this.user)
+    console.log('im here',this.user)
     this.user = JSON.parse(this.user)
     if(this.user.firstname && this.user.lastname)
     {

@@ -17,6 +17,7 @@ export class SidebarComponent implements OnInit {
   logout(){
     location.reload(); 
     this.auth.removeUser();
+    this.router.navigate(['/login']) 
   }
   
   routeToProfile(){ 

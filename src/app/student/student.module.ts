@@ -22,6 +22,7 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     NgxPaginationModule,
     SharedModuleModule
   ],
+  exports:[DetailStudentComponent], 
   providers:[StudentService,TeacherService]    
 })
 export class StudentModule { }

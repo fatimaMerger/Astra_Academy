@@ -14,7 +14,7 @@ export class AssignedStudentComponent implements OnInit {
     newArray = [];
     p: any = 1;
     data:any;
-    isShown: boolean;
+    isShown: boolean =false;
   constructor(private studentService:StudentService,private router:Router) { }
   ngOnInit(): void {
     this.isShown = false;
@@ -47,7 +47,11 @@ export class AssignedStudentComponent implements OnInit {
   displaydetails(dataToBePassed:any)
   {
     this.data = dataToBePassed;
+    // this.data=JSON.parse(this.data)
+    console.log("agaya", this.data)
     this.isShown = !this.isShown;
+    console.log('isShownnnnnnnnnnnnnn',this.isShown)
+
   }
 
   doSomething(isShow: boolean):void {
@@ -68,7 +72,7 @@ getTeacherInfo(){
       console.log('matched :',x.teachername , 'with : ',teacher.firstname)
     }
   })
-  console.log('newArray:   ',this.newArray)
+  console.log('newArray inside assing students:   ',this.newArray)
 
 }
 }
