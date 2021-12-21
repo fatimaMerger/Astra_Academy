@@ -1,0 +1,41 @@
+.content {
+    padding: 7rem 0 0;
+ }
+.sign
+{
+    color: white;
+    font-size: 20px;
+}
+.welcome
+{
+    color: white;
+}
+.welcome span
+{
+    color:#f55400;
+    font-family: fantasy;
+}
+a{
+    cursor: pointer;
+}
+.form-select {
+   
+    padding:0 0 10px!important;
+    font-size: 14px !important;
+    color: #b3b3b3 !important;
+    background-color: #152036 !important;
+    border: none !important;
+ 
+}
+.form-select:focus {
+    border-color: none;
+    border: none;
+    box-shadow: none;
+    outline: #152036;
+}
+.img-fluid
+{
+    position: absolute;
+    width: 539px;
+    left: 194px;
+}

@@ -1,0 +1,50 @@
+<div class="s-layout">
+  <app-sidebar></app-sidebar>
+<div class="container" *ngIf="!isShown">
+  <div class="row page-header">
+    <div class="col-md-7 d-flex page-head-detail">
+      <i class="fa fa-users"> </i>
+<h3 class="list-head">Students List <small>Welcome To Astra Dashboard</small> </h3> 
+</div>
+<div class="col-md-5"><button class="btn btn-primary add-btn"   routerLink="/admin/add-student"><i class="fa fa-plus"></i> Add New Student</button>
+</div>
+</div>
+<div class="row table-responsive">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Class</th>
+      <th scope="col">Section</th>
+      <th scope="col">Department</th>
+      <th scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentListArray |paginate: { itemsPerPage: 10, currentPage: p }; let i=index;">
+      <th scope="row">{{getAbsoluteIndex(p,i+1)}}</th>
+      <td>{{student.firstname}}</td> 
+      <td>{{student.lastname}}</td> 
+      <td>{{student.class}}</td>
+      <td>{{student.section}}</td>
+      <td>{{student.department}}</td> 
+            <td class="text-center"> <button  (click)="routeToUpdate(student.id)" class="btn btn-primary "><i class="fa fa-pencil"></i></button> 
+      
+       </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<pagination-controls (pageChange)="ChangePage($event)"></pagination-controls>
+<app-detail-student *ngIf="isShown"  (isShown)="doSomething($event)" [detailInfo]="data" ></app-detail-student>
+
+
+
+  </div>
+  
+
+  
+  

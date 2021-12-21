@@ -1,0 +1,18 @@
+.card{
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.table
+{
+    background: #1b2a47;
+    color: #fff;
+}
+.table > :not(:first-child)
+{
+    border-top: none !important;
+}
+thead, tbody, tfoot, tr, td, th
+{
+    padding: 10px;
+}

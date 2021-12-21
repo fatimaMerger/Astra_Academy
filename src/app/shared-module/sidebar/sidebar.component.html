@@ -1,0 +1,39 @@
+<!-- Sidebar -->
+<div class="s-layout__sidebar">
+    <a class="s-sidebar__trigger" >
+       <i class="fa fa-bars"></i>
+    </a>
+  
+    <nav class="s-sidebar__nav">
+    
+      <ul class="nav flex-column text-white w-100">
+        <a href="#" class="nav-link  my-2">
+         <img src="assets/images/logo.jpg" class="logo" width="50">
+         <h3 class="text-white text-center astra mt-1"><span> Astra</span> Academy</h3>
+        </a>
+        <li href="#" class="nav-link">
+         <i class="fa fa-user-circle-o " aria-hidden="true"></i>
+          <span class="mx-2 text-white" (click)="routeToProfile()">Profile</span>
+        </li>
+        <!-- <li href="#" class="nav-link">
+         <a> <i class="fa fa-male ms-1" aria-hidden="true"></i>
+          <span routerLink="/teacherlist" class="mx-2 text-white">Teacher</span></a>
+        </li>
+        <li href="#" class="nav-link">
+         <a>  <i class="fa fa-users " aria-hidden="true"></i>
+        <span routerLink="/studentlist" class="mx-2 text-white">Student</span></a>
+       </li> -->
+        <li href="#" class="nav-link position-absolute bottom-0">
+         <a>   <i class="fa fa-sign-out " aria-hidden="true"></i>
+       <span class="mx-2 text-white" (click)="logout()">LogOut</span></a> 
+        </li>
+      </ul>
+     
+      <span href="#" class="nav-link h4 w-100 mb-5">
+        <a href=""><i class="bx bxl-instagram-alt text-white"></i></a>
+        <a href=""><i class="bx bxl-twitter px-2 text-white"></i></a>
+        <a href=""><i class="bx bxl-facebook text-white"></i></a>
+      </span>
+    </nav>
+  </div>
+  

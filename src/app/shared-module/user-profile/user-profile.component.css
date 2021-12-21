@@ -1,0 +1,26 @@
+
+
+.card {
+    background-color: rgba(214, 224, 226, 0.2);
+    margin: 13% 0;
+    background-color: rgba(214, 224, 226, 0.2);
+    border-top-width: 0;
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.card i{
+    font-size: 70px
+}
+.card  .desc {
+    display: block;
+    margin: 8px 14px 0 14px;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 16px;
+    color: #ffff;
+    text-overflow: ellipsis;
+}
+

@@ -1,0 +1,16 @@
+.outer-div{
+    width:400px;
+    background-color: white;
+}
+
+.options{
+    background-color:white;
+    color:black;
+    font-weight:bold;
+
+}
+.options:hover{
+    background-color:#080D31;
+    color: white;
+    font-size:17px;
+}

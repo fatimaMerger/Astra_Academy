@@ -1,0 +1,114 @@
+<div class="s-layout">
+  <app-sidebar></app-sidebar>
+<div class="conatiner">
+    <div class="row page-header">
+        <div class="col-md-7 d-flex page-head-detail">
+          <i class="fa fa-user"> </i>
+    <h3 class="list-head">Add Student <small>Welcome To Astra Admin Dashboard</small> </h3> 
+    </div>
+      <div class="col-md-5"><button class="btn btn-primary add-btn"   routerLink="/admin/students"><i class="fa fa-arrow-left"></i>  Back</button>
+    </div>
+</div>
+    <form class="add-form" [formGroup]="adminStudentsForm" (submit) = "addStudent()">  <!-- formGroupName="studentsForm" -->
+    <div class="mb-3">
+      <label for="Firstname" class="form-label text-white">First Name</label><span class="require">*</span>
+      <input type="text" class="form-control" id="fname" formControlName="firstname"  [class.is-invalid]="
+      adminStudentsForm.get('firstname').invalid &&
+      adminStudentsForm.get('firstname').touched
+    ">
+    <small
+    [class.d-none]="
+    adminStudentsForm.get('firstname').valid ||
+    adminStudentsForm.get('firstname').untouched
+    "
+    class="text-danger"
+    >First Name is required
+  </small>
+    </div>
+    <div class="mb-3">
+        <label for="lastname" class="form-label text-white">Last Name</label><span class="require">*</span>
+        <input type="text" class="form-control" id="lname" formControlName="lastname" [class.is-invalid]="
+        adminStudentsForm.get('lastname').invalid &&
+        adminStudentsForm.get('lastname').touched
+      ">
+      <small
+      [class.d-none]="
+      adminStudentsForm.get('lastname').valid ||
+      adminStudentsForm.get('lastname').untouched
+      "
+      class="text-danger"
+      >Last Name is required
+    </small>
+    </div>
+    <div class="mb-3">
+        <label for="teacherId" class="form-label text-white">Teacher Name <small>(Autocomplete, please select one)</small></label><span class="require">*</span>
+        <input type="text" class="form-control" id="teachername" formControlName = "teachername" [class.is-invalid]="
+        adminStudentsForm.get('teachername').invalid &&
+        adminStudentsForm.get('teachername').touched
+      " (keyup)="autocomplete($event)">  
+      <small
+      [class.d-none]="
+      adminStudentsForm.get('teachername').valid ||
+      adminStudentsForm.get('teachername').untouched
+      "
+      class="text-danger"
+      >Teacher Name is required
+    </small>
+    <div class="outer-div">  
+        <div *ngFor="let item of newArray; let i = index">   
+          <div class="options" (click)="selectedTeacher(item)">  
+            <p *ngIf="item.firstname && isClicked">
+              {{ item.firstname }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+        <label for="class" class="form-label text-white">Class</label><span class="require">*</span>
+        <input type="text" class="form-control" id="class" formControlName="class" [class.is-invalid]="
+        adminStudentsForm.get('class').invalid &&
+        adminStudentsForm.get('class').touched
+      ">
+      <small
+      [class.d-none]="
+      adminStudentsForm.get('class').valid ||
+      adminStudentsForm.get('class').untouched
+      "
+      class="text-danger"
+      >Class is required
+    </small>
+    </div>
+    <div class="mb-3">
+        <label for="section" class="form-label text-white">Section</label><span class="require">*</span>
+        <input type="text" class="form-control" id="section" formControlName="section" [class.is-invalid]="
+        adminStudentsForm.get('section').invalid &&
+        adminStudentsForm.get('section').touched
+      ">
+      <small
+      [class.d-none]="
+      adminStudentsForm.get('section').valid ||
+      adminStudentsForm.get('section').untouched
+      "
+      class="text-danger"
+      >Section is required
+    </small>
+    </div>
+    <div class="mb-3">
+        <label for="dep" class="form-label text-white">Department</label><span class="require">*</span>
+        <input type="text" class="form-control" id="dep" formControlName="department" [class.is-invalid]="
+        adminStudentsForm.get('department').invalid &&
+        adminStudentsForm.get('department').touched
+      ">
+      <small
+      [class.d-none]="
+      adminStudentsForm.get('department').valid ||
+      adminStudentsForm.get('department').untouched
+      "
+      class="text-danger"
+      >Department is required
+    </small>
+    </div>
+    <button type="submit" class="btn submit">Submit</button>
+  </form>
+  </div>

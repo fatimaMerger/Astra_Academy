@@ -1,0 +1,96 @@
+<div class="s-layout">
+  <app-sidebar></app-sidebar>
+<div class="container">
+    <div class="row page-header">
+        <div class="col-md-7 d-flex page-head-detail">
+          <i class="fa fa-male"> </i>
+    <h3 class="list-head">Add Teacher <small>Welcome To Astra Dashboard</small> </h3> 
+    </div>
+  
+    </div>
+    </div>
+<form class="add-form" [formGroup]="teachersForm" (submit)="addteacher()" >  
+
+    <div class="mb-3">
+      <label for="Firstname" class="form-label text-white">First Name</label><span class="require">*</span>
+      <input type="text"   class="form-control" id="fname" formControlName="firstname"  [class.is-invalid]="
+      teachersForm.get('firstname').invalid &&
+      teachersForm.get('firstname').touched
+    " >
+    <small
+    [class.d-none]="
+    teachersForm.get('firstname').valid ||
+    teachersForm.get('firstname').untouched
+    "
+    class="text-danger"
+    >First Name is required
+  </small>
+    </div>
+    
+
+    <div class="mb-3">
+        <label for="lastname" class="form-label text-white">Last Name</label><span class="require">*</span>
+        <input type="text"  class="form-control" id="lname" formControlName="lastname" [class.is-invalid]="
+        teachersForm.get('lastname').invalid &&
+        teachersForm.get('lastname').touched
+      " >
+
+      <small
+      [class.d-none]="
+      teachersForm.get('lastname').valid ||
+      teachersForm.get('lastname').untouched
+      "
+      class="text-danger"
+      >Last Name is required
+    </small>
+    </div>
+    <div class="mb-3">
+        <label for="teacherId" class="form-label text-white">Email</label><span class="require">*</span>
+        <input type="email"  class="form-control" id="email" formControlName = "email"  [class.is-invalid]="
+        teachersForm.get('email').invalid &&
+        teachersForm.get('email').touched
+      ">
+      <small
+      [class.d-none]="
+      teachersForm.get('email').valid ||
+      teachersForm.get('email').untouched
+      "
+      class="text-danger"
+      >Email is required
+    </small>
+    </div>
+    <div class="mb-3">
+        <label for="class" class="form-label text-white">Designation</label><span class="require">*</span>
+        <input type="text" class="form-control" id="designation" formControlName="designation"  [class.is-invalid]="
+        teachersForm.get('designation').invalid &&
+        teachersForm.get('designation').touched
+      ">
+      <small
+      [class.d-none]="
+      teachersForm.get('designation').valid ||
+      teachersForm.get('designation').untouched
+      "
+      class="text-danger"
+      >Designation is required
+    </small>
+    </div>
+   
+    <div class="mb-3">
+        <label for="dep" class="form-label text-white">Department</label><span class="require">*</span>
+        <input type="text" class="form-control" id="dep" formControlName="department" [class.is-invalid]="
+        teachersForm.get('department').invalid &&
+        teachersForm.get('department').touched
+      ">
+        <small
+        [class.d-none]="
+        teachersForm.get('department').valid ||
+        teachersForm.get('department').untouched
+        "
+        class="text-danger"
+        >Department is required
+      </small>
+    </div>
+   
+    <button  class="btn submit">Submit</button>
+  </form>
+  </div>

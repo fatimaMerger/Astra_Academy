@@ -1,0 +1,45 @@
+
+<div class="s-layout">
+    <app-sidebar></app-sidebar>
+<div class="container">
+
+    <div class="row page-header">
+        <div class="col-md-7 d-flex page-head-detail">
+          <i class="fa fa-user"> </i>
+    <h3 class="list-head">Student Details <small>Welcome To Astra Dashboard</small> </h3> 
+    </div>
+    <div class="col-md-5">
+        <button class="add-btn btn-primary  add-btn" (click)="onBackPress()"><i class="fa fa-chevron-left me-1" aria-hidden="true"></i>Back</button>
+    
+    </div>
+    </div>
+ 
+	<div class="card">
+        <table class="table">
+            <tr>
+                <td colspan="4" class="text-center">
+                    <h2 class="bb">{{detailInfo.firstname + detailInfo.lastname }}</h2>   
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-user"></i>First Name</td>
+                <td>: <b>{{detailInfo.firstname}}</b></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-user"></i>Last name</td>
+                <td>: <b>{{detailInfo.lastname}}</b></td>
+            </tr> 
+            <tr>
+                <td><i class=" fa fa-envelope-o"></i> Email Address</td>
+                <td>: <b>{{detailInfo.email}}</b></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-phone"></i> Phone</td>
+                <td>: <b>{{detailInfo.PhoneNumber}}</b></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>
+
+</div>
